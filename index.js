@@ -20,6 +20,4 @@ app.post('/stock', (request, response) => {
 
 app.use(error.client, error.server);
 
-app.listen(3000, () => {
-  console.log('App is running');
-});
+module.exports = app;
