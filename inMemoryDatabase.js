@@ -4,12 +4,12 @@ function getBooks () {
   return Promise.resolve(books);
 }
 
-function stockUp (isbn, count) {
-  var item = _findItem(isbn);
+function stockUp (book) {
+  var item = _findItem(book.isbn);
   if (item) {
-    item.count = count;
+    item.count = book.count;
   } else {
-    books.push({isbn: isbn, count: count});
+    books.push({isbn: book.isbn, count: book.count});
   }
   return Promise.resolve();
 }
