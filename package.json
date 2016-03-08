@@ -6,7 +6,9 @@
   "scripts": {
     "start": "nodemon app.js",
     "test": "npm run lint && NODE_ENV=test mocha",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "infra-test": "node ./ifra/test.js",
+    "infra-prod": "node ./ifra/prod.js"
   },
   "repository": {
     "type": "git",
