@@ -21,6 +21,7 @@
   "devDependencies": {
     "eslint": "^2.3.0",
     "eslint-config-andersos": "^0.2.0",
+    "heroin-js": "^1.5.0",
     "mocha": "^2.4.5",
     "nodemon": "^1.9.1",
     "supertest": "^1.2.0"
