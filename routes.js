@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 function index (request, response) {
-  response.send('Hello World!');
+  response.send('Hello world!');
 }
 
 function getBooks (request, response, next) {
