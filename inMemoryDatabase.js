@@ -29,8 +29,13 @@ function getCount (isbn) {
   }
 }
 
+function reset () {
+  books = [];
+}
+
 module.exports = {
   getBooks: getBooks,
   stockUp: stockUp,
-  getCount: getCount
+  getCount: getCount,
+  reset: reset
 };

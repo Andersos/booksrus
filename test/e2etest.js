@@ -22,7 +22,7 @@ describe('POST /stock', function () {
     .send(data)
     .expect('Content-Type', /json/)
     .expect(function (response) {
-      assert.deepEqual(data, response.body);
+      assert.deepEqual(response.body, data);
     })
     .expect(200, done);
   });
