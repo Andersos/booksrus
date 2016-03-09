@@ -3,7 +3,8 @@ var base = require('./base.js');
 var configurator = heroin(process.env.HEROKU_API_TOKEN, {debug: false});
 
 var prod = {
-  name: 'booksrus'
+  name: 'booksrus',
+  log_drains: ['syslog://data.logentries.com:13636']
 };
 
 var config = Object.assign(prod, base);
