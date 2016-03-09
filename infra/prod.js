@@ -7,7 +7,7 @@ var prod = {
   log_drains: ['syslog://data.logentries.com:13636']
 };
 
-var config = Object.assign(prod, base);
+var config = Object.assign({}, base, prod);
 configurator(config);
 configurator.export('booksrus').then((result) => {
   console.log(result);
