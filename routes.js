@@ -18,7 +18,17 @@ function getBooks (request, response, next) {
 function getCount (request, response, next) {
   database.getCount(request.params.isbn).then((count) => {
     if (count !== null) {
-      response.status(200).json({count: count});
+      response.format({
+        'application/json': () => {
+          response.status(200).json({count: count, type: 'json'});
+        },
+        'text/html': () => {
+          response.send('<div>Stock: ' + count + '</div>');
+        },
+        'default': () => {
+          response.status(200).json({count: count, type: 'default'});
+        }
+      });
     } else {
       response.status(404).json({error: 'No book with ISBN: ' + request.params.isbn});
     }
