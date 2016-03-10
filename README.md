@@ -4,3 +4,6 @@
 start mongo:
 `mongod --dbpath=/Users/anders/dev/booksrus/mongodb`
 
+testing:
+`npm test`
+
